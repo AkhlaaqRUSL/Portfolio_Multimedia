@@ -10,3 +10,6 @@ Feel free to explore the various sections and get in touch if you have any quest
 
 Source -- https://github.com/AkhlaaqRUSL/Portfolio_Multimedia/tree/main
 
+website link -- https://akhlaaqrusl.github.io/Portfolio_Multimedia/
+
+website link using ntelify  - https://tiny-sawine-517c71.netlify.app/ 
