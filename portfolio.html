@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="mediaqueries.css"/>
+</head>
+<body>
+
+  <nav id="desktop-nav">
+    <div class="logo-container">
+      <div class="logo-img"><img src="./images/AH_Logo.jpg" alt=""></div>
+      <div class="logo-text">Akhlaaq<br>Hussain</div>
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="review.html">Review</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ <nav id="hamburger-nav">
+  <div class="logo-container">
+    <div class="logo-img"><img src="./images/AH_Logo.jpg" alt=""></div>
+    <div class="logo-text">Akhlaaq<br>Hussain</div>
+  </div>
+
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+        <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+        <li><a href="skill.html" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="portfolio.html" onclick="toggleMenu()">Portfolio</a></li>
+        <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        <li><a href="review.html" onclick="toggleMenu()">Review</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <!------------------------------------------------------***** PHOTOGRAPHY *******-------------------------------------------------------------------->
+      
+  <ul class="portfolio-nav-links">
+    <li><a href="#photography">Photography</a></li>
+    <li><a href="#vlogs">Vlogs</a></li>
+    <li><a href="#web-design">Web Design</a></li>
+  </ul>
+
+  <section id="Photography">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title-portfolio">Photography</h1>
+<div class="slider" x-data="{start: true, end: false}">
+  <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography01.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>#Hanthana</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography02.jpg"  alt="Image">
+      <div class="slider__info">
+        <h2>#MihintaleRock</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography03.jpg"  alt="Image">
+      <div class="slider__info">
+        <h2>#Maahi</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography04.jpg"  alt="Image">
+      <div class="slider__info">
+        <h2>#River</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography11.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>#IndianTemple</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography05.jpg"  alt="Image">
+      <div class="slider__info">
+        <h2>#AnuradhapuraMosque</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography06.jpg"  alt="Image">
+      <div class="slider__info">
+        <h2>#Nuraicholai</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography07 (2).jpg"  alt="Image">
+      <div class="slider__info">
+        <h2>#Badulla</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography08.jpg"  alt="Image">
+      <div class="slider__info">
+        <h2>#Foodie</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography09.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>#Nature</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./images/photography10.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>#Mehandi</h2>
+      </div>
+    </div>
+  </div>
+  <div class="slider__nav">
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+  </div>
+</div>
+
+      
+
+
+  </section>
+
+  <!------------------------------------------VLOGS-------------------------------------------------------------------->
+  <section id="vlogs">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title-portfolio">Vlogs</h1>
+    <div class="video-container">
+      <a class="video-slider, videobox">
+        <div class="video-slide">
+          <video controls>
+            <source src="./videos/hanthana.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-slide">
+          <video controls>
+            <source src="./videos/kekkirava.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-slide">
+          <video controls>
+            <source src="./videos/colombo.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+    
+    
+      <button class="video-slider-btn left-side" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="video-slider-btn right-side" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+  </section>
+
+
+
+</section>
+<!---------------------------------------------------------WEB DESIGN---------------------------------------------------------->
+<section id="web-design">
+  
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title-portfolio">Web Design</h1>
+    <div class="experience-details-container">
+
+      <div class="web-design-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+
+            <video id="videoPlayer" style="display: none;" controls>
+              <source src="./videos/DBMS MILESTONE.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <h2 class="experience-sub-title project-title">ICT - 1407 - DBMS<br>My Cinema Ticket Booking System</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="playVideo()"
+            >
+              Play Video
+            </button>
+          </div>
+
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./images/sigiriya.webp"
+              alt="Project 2"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">ICT - 2204 - Web Technology<br>Portfolio About Favourite Place - Sigiriya </h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/AkhlaaqRUSL/AkhlaaqRUSL.github.io'"
+            >
+              Github
+            </button>
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  
+
+
+</section>
+  
+
+
+
+  
+
+      <script src="script.js"></script>
+
+
+
+</body>
+</html>
